@@ -1,17 +1,18 @@
-buildscript {
-    repositories {
-        mavenLocal()
-    }
-    dependencies {
-        classpath 'com.zz.trace:trace-plugin:1.0.0'
-    }
-}
+//buildscript {
+//    repositories {
+//        mavenLocal()
+//    }
+//    dependencies {
+//        classpath 'com.zz.trace:trace-plugin:1.0.0'
+//    }
+//}
 
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+//    id 'trace-plugin'
 }
-apply plugin: 'trace-plugin'
+//apply plugin: 'trace-plugin'
 
 android {
     namespace 'com.zz.traceplugin'
