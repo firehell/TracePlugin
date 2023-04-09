@@ -3,7 +3,16 @@ plugins {
     id 'maven-publish'
 }
 apply plugin: 'kotlin'
-
+//repositories {
+//    mavenLocal()
+//    google()
+//    mavenCentral()
+//}
+dependencies {
+    implementation gradleApi()
+    implementation 'com.android.tools.build:gradle:4.0.0'
+//    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$gradle.KOTLIN_VERSION"
+}
 publishing {
     publications {
         maven(MavenPublication) {

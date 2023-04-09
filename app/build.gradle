@@ -12,7 +12,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 //    id 'trace-plugin'
 }
-//apply plugin: 'trace-plugin'
+apply plugin: 'trace-plugin'
 
 android {
     namespace 'com.zz.traceplugin'
