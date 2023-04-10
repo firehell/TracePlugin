@@ -14,5 +14,10 @@ class ZTracePlugin : Plugin<Project> {
 //            throw GradleException("Matrix Plugin, Android Application plugin required.")
 //        }
         p0.extensions.getByType(AppExtension::class.java).registerTransform(TraceTransform())
+//        println("开始 ")
+//        if (p0.plugins.hasPlugin("com.android.application")) {
+//            throw GradleException("Matrix Plugin, Android Application plugin required.")
+//        }
+//        println("成功")
     }
 }
