@@ -1,30 +1,15 @@
-//buildscript {
-//    repositories {
-//        mavenLocal()
-//    }
-//    dependencies {
-//        classpath 'com.zz.trace:trace-plugin:1.0.0'
-//    }
-//}
-
-plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
-//    id 'trace-plugin'
-}
-apply plugin: 'trace-plugin'
+apply plugin: 'com.android.application'
+apply plugin: 'com.zz.TracePlugin'
 
 android {
-    namespace 'com.zz.traceplugin'
-    compileSdk 33
+    compileSdkVersion 33
 
     defaultConfig {
         applicationId "com.zz.traceplugin"
-        minSdk 21
-        targetSdk 33
+        minSdkVersion 23
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -38,18 +23,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
 }
 
 dependencies {
-
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 }
