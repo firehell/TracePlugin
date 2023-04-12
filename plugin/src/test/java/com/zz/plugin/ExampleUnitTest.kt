@@ -1,4 +1,4 @@
-package com.zz.trace
+package com.zz.plugin
 
 import org.junit.Test
 
