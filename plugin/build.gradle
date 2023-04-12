@@ -1,0 +1,21 @@
+plugins {
+//    id 'com.android.library'
+    id 'java-gradle-plugin'
+    id 'kotlin'
+//    id 'org.jetbrains.kotlin.android'
+}
+dependencies {
+    implementation gradleApi()
+    implementation 'com.android.tools.build:gradle:7.4.2'
+}
+
+gradlePlugin {
+    plugins {
+        version {
+            id = 'com.zz.plugin.demo'
+            displayName = 'DemoPlugin'
+            description = 'DemoPlugin'
+            implementationClass = 'com.zz.plugin.DemoPlugin'
+        }
+    }
+}

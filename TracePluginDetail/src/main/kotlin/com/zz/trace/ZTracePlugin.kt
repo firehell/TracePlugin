@@ -6,18 +6,25 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 
 class ZTracePlugin : Plugin<Project> {
-    companion object{
+    companion object {
         const val TAG = "Trace plugin"
     }
+
     override fun apply(p0: Project) {
+        println("===========  开始  ============")
+        p0.plugins.forEach {
+            println(it.toString())
+        }
+//        p0.pluginManager.withPlugin("com.android.build.gradle.internal.plugins.AppPlugin") {
+//            val extension = p0.extensions.getByType(AppExtension::class.java)
+//            extension.applicationVariants.forEach {
+//                println("name: ${it.name}")
+//            }
+//        }
 //        if (p0.plugins.hasPlugin("com.android.application")) {
 //            throw GradleException("Matrix Plugin, Android Application plugin required.")
 //        }
         p0.extensions.getByType(AppExtension::class.java).registerTransform(TraceTransform())
-//        println("开始 ")
-//        if (p0.plugins.hasPlugin("com.android.application")) {
-//            throw GradleException("Matrix Plugin, Android Application plugin required.")
-//        }
-//        println("成功")
+        println("===========  结束  ============")
     }
 }

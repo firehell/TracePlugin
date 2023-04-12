@@ -25,3 +25,4 @@ dependencyResolutionManagement {
 rootProject.name = "TracePlugin"
 include ':app'
 include ':TracePluginDetail'
+include ':plugin'
